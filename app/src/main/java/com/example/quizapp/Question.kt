@@ -3,5 +3,6 @@ package com.example.quizapp
 data class Question(
     val text: String,
     val options: List<String>,
-    val correctAnswer: Int
+    val correctAnswer: Int,
+    val explanation: String
 )

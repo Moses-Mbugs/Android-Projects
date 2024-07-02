@@ -34,6 +34,6 @@
         android:layout_below="@id/Categories_view"
         android:layout_marginTop="16dp"
         android:columnCount="2"
-        android:padding="16dp">
+        android:padding="20dp">
     </GridLayout>
 </RelativeLayout>

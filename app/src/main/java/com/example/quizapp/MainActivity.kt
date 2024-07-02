@@ -10,8 +10,8 @@ import androidx.core.content.ContextCompat
 class MainActivity : AppCompatActivity() {
 
     private val categories = listOf(
-        Category("Trivia_1", R.drawable.puss),
-        Category("Trivia_2", R.drawable.shrek)
+        Category("Trivia_1", R.drawable.gq),
+        Category("Trivia_2", R.drawable.random)
         // Add more categories as needed
     )
 
