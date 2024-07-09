@@ -1,39 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/white"
+    >
 
     <TextView
         android:id="@+id/Title_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Are You Even Kenyan"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp"
-        android:textStyle="bold"
-        android:textSize="32dp"
-        android:fontFamily="" />
+        android:fontFamily="casual"
+        android:textColor="@color/black"
+        android:text="Are You Even Kenyan"
+        android:textSize="38dp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/Categories_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Categories"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="65dp"
-        android:textStyle="bold"
+        android:layout_marginTop="75dp"
+        android:fontFamily="casual"
+        android:textColor="@color/black"
+        android:text="Categories"
         android:textSize="24dp"
-        android:fontFamily="" />
+        android:textStyle="bold" />
 
-    <GridLayout
-        android:id="@+id/category_grid"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/Categories_view"
-        android:layout_marginTop="16dp"
-        android:columnCount="2"
-        android:padding="20dp">
-    </GridLayout>
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        />
+
 </RelativeLayout>
