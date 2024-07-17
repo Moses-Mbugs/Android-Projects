@@ -15,7 +15,7 @@ class QuestionActivity : AppCompatActivity() {
 
     // List of background images corresponding to each category
     private val backgroundImages = mapOf(
-        "Trivia_1" to R.drawable.bg1,
+        "Trivia_1" to R.drawable.k1,
         "Trivia_2" to R.drawable.bg2
         // Add more mappings as needed for each category
     )
@@ -66,21 +66,28 @@ class QuestionActivity : AppCompatActivity() {
         }
     }
 
+//    private fun showExplanationDialog(explanation: String) {
+//        val builder = AlertDialog.Builder(this)
+//        val inflater = layoutInflater
+//        val dialogLayout = inflater.inflate(R.layout.dialog_explanation, null)
+//        val explanationText: TextView = dialogLayout.findViewById(R.id.explanation_text)
+//
+//        explanationText.text = explanation
+//
+//        builder.setView(dialogLayout)
+//        builder.setPositiveButton("Continue") { dialog, _ ->
+//            dialog.dismiss()
+//            currentQuestionIndex++
+//            showQuestion()
+//        }
+//        builder.show()
+//    }
     private fun showExplanationDialog(explanation: String) {
-        val builder = AlertDialog.Builder(this)
-        val inflater = layoutInflater
-        val dialogLayout = inflater.inflate(R.layout.dialog_explanation, null)
-        val explanationText: TextView = dialogLayout.findViewById(R.id.explanation_text)
-
-        explanationText.text = explanation
-
-        builder.setView(dialogLayout)
-        builder.setPositiveButton("Continue") { dialog, _ ->
-            dialog.dismiss()
+        val explanationBottomSheet = ExplanationBottomSheet(explanation) {
             currentQuestionIndex++
             showQuestion()
         }
-        builder.show()
+        explanationBottomSheet.show(supportFragmentManager, explanationBottomSheet.tag)
     }
 
     private fun showResult() {
