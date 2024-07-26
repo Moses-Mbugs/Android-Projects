@@ -9,11 +9,11 @@
         </shape>
     </item>
     <!-- Optional pattern layer -->
-<!--    <item>-->
-<!--        <bitmap-->
-<!--            android:src="@drawable/did"-->
-<!--            android:tileMode="clamp"-->
-<!--            />-->
+    <item>
+        <bitmap
+            android:src="@drawable/did"
+            android:tileMode="clamp"
+            />
 
-<!--    </item>-->
+    </item>
 </layer-list>

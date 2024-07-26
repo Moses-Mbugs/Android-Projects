@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/white"
+    android:background="@drawable/pages"
     >
 
     <TextView
@@ -12,33 +12,35 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp"
-        android:fontFamily="casual"
+        android:fontFamily="@font/typography"
         android:textColor="@color/black"
-        android:text="Are You Even Kenyan"
-        android:textSize="38dp"
-        android:textStyle="bold" />
+        android:text="Mzalendo"
+        android:textSize="58dp"
+         />
 
     <TextView
         android:id="@+id/Categories_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp"
-        android:fontFamily="casual"
-        android:textColor="@color/black"
+        android:layout_marginTop="105dp"
+        android:fontFamily="@font/typography"
         android:text="Categories"
+        android:textColor="@color/black"
         android:textSize="24dp"
-        android:textStyle="bold" />
+        android:textStyle="normal" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/Categories_view"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="60dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         />
+
+
 
 </RelativeLayout>

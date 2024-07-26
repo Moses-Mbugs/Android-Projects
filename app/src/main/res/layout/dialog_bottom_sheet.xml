@@ -10,23 +10,20 @@
         android:id="@+id/explanation_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="This is why the answer is wrong."
-        android:textSize="19dp"
         android:fontFamily="casual"
+        android:padding="8dp"
+        android:text="This is why the answer is wrong."
         android:textColor="@android:color/black"
-        android:padding="8dp" />
+        android:textSize="19dp" />
 
     <Button
         android:id="@+id/continue_button"
         android:layout_width="353dp"
         android:layout_height="200dp"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/did"
+        android:background="@drawable/did3"
         android:padding="12dp"
-        android:textColor="@android:color/white"
-        />
+        android:textColor="@android:color/white" />
 
 
-
-
-    </LinearLayout>
+</LinearLayout>

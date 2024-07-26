@@ -16,7 +16,7 @@ class ResultActivity : AppCompatActivity() {
         val percentage = intent.getDoubleExtra("percentage", 0.0)
 
 //        findViewById<TextView>(R.id.result_text).text = " Hmmmmm \n You got $score out of $total correct!"
-        findViewById<TextView>(R.id.Percentage_text).text = "Are you even Kenyan? \n You got ${String.format("%.2f", percentage)}%"
+        findViewById<TextView>(R.id.Percentage_text).text = "${String.format("%.2f", percentage)}%"
 
         val retryButton: Button = findViewById(R.id.retry_button)
         retryButton.setOnClickListener {

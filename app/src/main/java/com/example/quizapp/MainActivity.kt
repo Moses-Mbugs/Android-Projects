@@ -7,8 +7,8 @@ import androidx.viewpager2.widget.ViewPager2
 class MainActivity : AppCompatActivity() {
 
     private val categories = listOf(
-        Category("Trivia_1", R.drawable.bg1),
-        Category("Trivia_2", R.drawable.bg2)
+        Category("Political", R.drawable.politician),
+        Category("On the Road", R.drawable.roads)
         // Add more categories as needed
     )
 

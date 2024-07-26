@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg9"
+    android:background="@drawable/bg2"
     tools:context=".QuestionActivity">
 
 
@@ -15,7 +15,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginTop="60dp"
         android:layout_marginRight="25dp"
-        android:fontFamily="casual"
+        android:fontFamily="@font/roboto_slab"
         android:textColor="@color/black"
         android:textSize="24sp" />
 
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/question_text"
         android:layout_centerHorizontal="true"
-        android:fontFamily="casual"
+        android:fontFamily="@font/roboto_slab"
         android:layout_marginTop="30dp"
         android:textColor="@color/black"
         android:textSize="18sp"
@@ -38,12 +38,15 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/option1"
         android:layout_centerHorizontal="true"
-        android:fontFamily="casual"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center"
-        android:textColor="@color/black"
-        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto_slab"
         android:background="@drawable/shadow_button_layer_list"
-        />
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <include
+        android:id="@+id/did_you_know_popup"
+        layout="@layout/popup_did_you_know" />
 
 </RelativeLayout>

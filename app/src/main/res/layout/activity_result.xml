@@ -9,41 +9,29 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/result" />
-
-    <TextView
-        android:id="@+id/result_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="182dp"
-        android:fontFamily="casual"
-        android:textColor="@color/black"
-        android:textSize="28sp"
-        android:textStyle="bold" />
+        android:src="@drawable/fail_copy" />
 
     <TextView
         android:id="@+id/Percentage_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/result_text"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="335dp"
         android:text="Percentage"
-        android:fontFamily="casual"
+        android:fontFamily="@font/typography"
         android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
+        android:textSize="34sp"
+         />
 
     <Button
         android:id="@+id/retry_button"
         android:layout_width="101dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/Percentage_text"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="189dp"
         android:layout_centerHorizontal="true"
+        android:background="@drawable/shadow_button_layer_list"
         android:text="Retry"
-        android:textSize="18sp"
-        android:background="@drawable/shadow_button_layer_list" />
+        android:fontFamily="casual"
+        android:textSize="18sp" />
 </RelativeLayout>
