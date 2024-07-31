@@ -3,9 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg2"
+    android:background="@drawable/bg_r"
     tools:context=".QuestionActivity">
-
 
     <TextView
         android:id="@+id/question_text"
@@ -13,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="275dp"
         android:layout_marginRight="25dp"
         android:fontFamily="@font/roboto_slab"
         android:textColor="@color/black"
@@ -29,8 +28,7 @@
         android:layout_marginTop="30dp"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:background="@drawable/shadow_button_layer_list"
-        />
+        android:background="@drawable/shadow_button_layer_list" />
 
     <Button
         android:id="@+id/option2"

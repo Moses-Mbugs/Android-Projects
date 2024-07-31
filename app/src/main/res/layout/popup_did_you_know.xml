@@ -1,8 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:id="@+id/did_you_know_popup"
-    android:background="@drawable/did3"
+    android:background="@drawable/did"
     android:padding="16dp"
     android:layout_alignParentBottom="true"
     android:visibility="gone">
@@ -13,17 +13,10 @@
             android:layout_height="wrap_content"
             android:textSize="16sp"
             android:textColor="@android:color/white"
-            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+           android:fontFamily="@font/roboto_slab"
             android:text="Did you know?" />
 
-        <Button
-            android:id="@+id/dismiss_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/did_you_know_text"
-            android:text="Close"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"/>
 
 
 </RelativeLayout>

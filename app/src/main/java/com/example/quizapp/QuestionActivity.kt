@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -31,19 +32,15 @@ class QuestionActivity : AppCompatActivity() {
         questions = QuestionRepository.categories[category] ?: listOf()
 
         // Set background image based on category
-//        val backgroundImage = backgroundImages[category] ?: R.drawable.default_bg
+//        val backgroundImage = backgroundImages[category] ?: R.drawable.bg_r
 //        findViewById<ImageView>(R.id.background_image).setImageResource(backgroundImage)
-
-        val backgroundImages = mapOf(
-            "Political" to R.drawable.bg_p,
-            "On the Road" to R.drawable.bg_r
-        )
 
         val popup = findViewById<RelativeLayout>(R.id.did_you_know_popup)
         popup.translationY = popup.height.toFloat()
 
         showQuestion()
     }
+
     // if the categories have more than 15 questions the user will be prompted with a dialogue whether they wish to continue or quit
     private fun showQuestion() {
         if (currentQuestionIndex < questions.size) {
@@ -75,10 +72,11 @@ class QuestionActivity : AppCompatActivity() {
         val question = questions[currentQuestionIndex]
         if (question.correctAnswer == selectedOptionIndex) {
             score++
+            currentQuestionIndex++
+            showQuestion()
+        } else {
+            showRandomFact()
         }
-        currentQuestionIndex++
-        showRandomFact()
-        showQuestion()
     }
 
     private fun showIntermediateScoreDialog() {
@@ -104,27 +102,28 @@ class QuestionActivity : AppCompatActivity() {
         }
     }
 
-
-// this will randomly show a fact while the user is playing the game
+    // This will randomly show a fact while the user is playing the game
     private fun showRandomFact() {
-    val category = intent.getStringExtra("category")
-    val facts = DidYouKnowRepository.facts[category] ?: listOf()
-    if (facts.isNotEmpty()) {
-        val randomFact = facts.random()
-        val popup = findViewById<RelativeLayout>(R.id.did_you_know_popup)
-        val factText = findViewById<TextView>(R.id.did_you_know_text)
-        factText.text = randomFact
+        val category = intent.getStringExtra("category")
+        val facts = DidYouKnowRepository.facts[category] ?: listOf()
+        if (facts.isNotEmpty()) {
+            val randomFact = facts.random()
+            val popup = findViewById<RelativeLayout>(R.id.did_you_know_popup)
+            val factText = findViewById<TextView>(R.id.did_you_know_text)
+            factText.text = randomFact
 
-        popup.visibility = View.VISIBLE
-        popup.animate().translationY(0f).setDuration(500).start()
+            popup.visibility = View.VISIBLE
+            popup.animate().translationY(0f).setDuration(500).start()
 
-        findViewById<Button>(R.id.dismiss_button).setOnClickListener {
-            popup.animate().translationY(popup.height.toFloat()).setDuration(500).withEndAction {
-                popup.visibility = View.GONE
-            }.start()
+            popup.setOnClickListener {
+                popup.animate().translationY(popup.height.toFloat()).setDuration(500).withEndAction {
+                    popup.visibility = View.GONE
+                    currentQuestionIndex++
+                    showQuestion()
+                }.start()
+            }
         }
     }
-}
 
     private fun showResult() {
         val resultIntent = Intent(this, ResultActivity::class.java)

@@ -1,7 +1,7 @@
 package com.example.quizapp
 
 object QuestionRepository {
-    val categories = mapOf(
+    val categories: Map<String, List<Question>> = mapOf(
         "Political" to listOf(
             Question(
                 "The price of fuel hikes AGAIN. The ungrateful country is complaining huko on a social media APP. What do you do?",
@@ -313,6 +313,8 @@ object QuestionRepository {
 
         )
     )
+
+
 }
 
 
